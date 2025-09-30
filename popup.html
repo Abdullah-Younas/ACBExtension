@@ -3,46 +3,77 @@
 <head>
   <style>
     body {
-      width: 300px;
-      padding: 10px;
+      width: 400px;
+      padding: 15px;
       font-family: Arial, sans-serif;
     }
     h3 {
       margin-top: 0;
+      color: #333;
+    }
+    .section {
+      margin-bottom: 20px;
     }
     textarea {
       width: 100%;
       height: 150px;
-      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 8px;
+      font-family: monospace;
+      font-size: 12px;
+      box-sizing: border-box;
     }
     button {
       background: #4CAF50;
       color: white;
       border: none;
-      padding: 8px 15px;
+      padding: 10px 20px;
+      border-radius: 4px;
       cursor: pointer;
-      border-radius: 3px;
+      font-size: 14px;
+      width: 100%;
+      margin-top: 10px;
     }
     button:hover {
       background: #45a049;
     }
     .status {
+      padding: 10px;
+      border-radius: 4px;
       margin-top: 10px;
-      padding: 5px;
-      border-radius: 3px;
+      display: none;
+      text-align: center;
     }
     .success {
       background: #d4edda;
       color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #555;
     }
   </style>
 </head>
 <body>
-  <h3>Content Filter Settings</h3>
-  <label>Banned words (one per line):</label>
-  <textarea id="wordsList"></textarea>
-  <button id="saveBtn">Save Words</button>
-  <div id="status" class="status" style="display:none;"></div>
+  <h3>🚫 Content Blocker Settings</h3>
+  
+  <div class="section">
+    <label>Banned Words (one per line):</label>
+    <textarea id="wordsList" placeholder="Enter banned words..."></textarea>
+  </div>
+  
+  <div class="section">
+    <label>Whitelisted Domains (one per line):</label>
+    <textarea id="whitelistList" placeholder="github.com&#10;youtube.com&#10;google.com"></textarea>
+  </div>
+  
+  <button id="saveBtn">💾 Save Settings</button>
+  <div id="status" class="status"></div>
+  
   <script src="popup.js"></script>
 </body>
 </html>
