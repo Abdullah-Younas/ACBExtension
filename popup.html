@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    h3 {
+      margin-top: 0;
+    }
+    textarea {
+      width: 100%;
+      height: 150px;
+      margin-bottom: 10px;
+    }
+    button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    .status {
+      margin-top: 10px;
+      padding: 5px;
+      border-radius: 3px;
+    }
+    .success {
+      background: #d4edda;
+      color: #155724;
+    }
+  </style>
+</head>
+<body>
+  <h3>Content Filter Settings</h3>
+  <label>Banned words (one per line):</label>
+  <textarea id="wordsList"></textarea>
+  <button id="saveBtn">Save Words</button>
+  <div id="status" class="status" style="display:none;"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
