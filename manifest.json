@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Site Content Filter",
+  "name": "ACB",
   "version": "1.5",
   "description": "Blocks sites with specified keywords",
   "permissions": [
